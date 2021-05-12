@@ -13,7 +13,7 @@ public class UserManager implements UserService{
 	private UserDao userDao;
 	
 	private boolean ifValid(User user) {
-		String regex = "^(.+)@(.+)$";
+		String regex = "\\w+@\\w+\\.[a-zA-Z]{2,}";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(user.geteMail());
 		
